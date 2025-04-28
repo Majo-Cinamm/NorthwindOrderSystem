@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NorthwindOrderSystem.Core.Entities
 {
-    internal class OrderDetail
+    public class OrderDetail
     {
         public int OrderId { get; set; }
         public int ProductId { get; set; }

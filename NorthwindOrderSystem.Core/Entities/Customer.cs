@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NorthwindOrderSystem.Core.Entities
 {
-    internal class Customer
+    public class Customer
     {
         public string CustomerId { get; set; }
         public string CompanyName { get; set; }
