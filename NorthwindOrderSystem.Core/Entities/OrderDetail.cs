@@ -14,7 +14,8 @@ namespace NorthwindOrderSystem.Core.Entities
         public short? Quantity { get; set; }
         public float Discount { get; set; }
 
+        // 🔥 Relaciones nullable por seguridad
         public Order Order { get; set; }
-        public Product Product { get; set; }
+        public Product? Product { get; set; }
     }
 }

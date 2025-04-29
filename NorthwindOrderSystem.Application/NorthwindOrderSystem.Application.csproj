@@ -16,8 +16,4 @@
     <ProjectReference Include="..\NorthwindOrderSystem.Core\NorthwindOrderSystem.Core.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="UseCases\" />
-  </ItemGroup>
-
 </Project>

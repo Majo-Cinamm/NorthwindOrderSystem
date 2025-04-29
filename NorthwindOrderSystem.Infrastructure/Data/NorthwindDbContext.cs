@@ -39,11 +39,14 @@ namespace NorthwindOrderSystem.Infrastructure.Data
                     .WithMany(emp => emp.Orders)
                     .HasForeignKey(e => e.EmployeeId);
 
-                entity.Property(e => e.ShipAddress).HasMaxLength(60);
-                entity.Property(e => e.ShipCity).HasMaxLength(15);
-                entity.Property(e => e.ShipRegion).HasMaxLength(15);
-                entity.Property(e => e.ShipPostalCode).HasMaxLength(10);
-                entity.Property(e => e.ShipCountry).HasMaxLength(15);
+                entity.Property(e => e.ShipAddress).HasMaxLength(60).IsRequired(false); // 👈
+                entity.Property(e => e.ShipCity).HasMaxLength(15).IsRequired(false); // 👈
+                entity.Property(e => e.ShipRegion).HasMaxLength(15).IsRequired(false); // 👈
+                entity.Property(e => e.ShipPostalCode).HasMaxLength(10).IsRequired(false); // 👈
+                entity.Property(e => e.ShipCountry).HasMaxLength(15).IsRequired(false); // 👈
+                entity.Property(e => e.ShipName).HasMaxLength(40).IsRequired(false); // 👈
+
+                entity.Property(e => e.Freight).HasColumnType("money").IsRequired(false); // 👈
             });
 
             // Configurar OrderDetail (clave compuesta), con eliminacion en cascada

@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace NorthwindOrderSystem.Application.DTOs
 {
-    internal class OrderDetailDto
+    public class OrderDetailDto
     {
+        public int ProductId { get; set; }
+        public short Quantity { get; set; }
+        public decimal UnitPrice { get; set; }
     }
 }
